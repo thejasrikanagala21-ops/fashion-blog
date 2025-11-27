@@ -1,0 +1,445 @@
+/* Import Google Fonts for luxurious typography */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto:wght@300;400;500&family=Dancing+Script&display=swap');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    color: #5d4e37; /* Warm brown for text */
+    /* Default body background image - replace or override per page */
+    background: url('https://via.placeholder.com/1920x1080/3e2723/ffffff?text=Default+Brown+Fabric') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #3e2723; /* Fallback color */
+}
+
+/* Page-specific overrides for body background */
+.page1 body {
+    background-image: url('https://via.placeholder.com/1920x1080/3e2723/ffffff?text=Page1+Body+Image'); /* Replace with your image for page1 body */
+}
+.page2 body {
+    background-image: url('https://via.placeholder.com/1920x1080/3e2723/ffffff?text=Page2+Body+Image'); /* Replace for page2 */
+}
+.page3 body {
+    background-image: url('https://via.placeholder.com/1920x1080/3e2723/ffffff?text=Page3+Body+Image'); /* Replace for page3 */
+}
+.page4 body {
+    background-image: url('https://via.placeholder.com/1920x1080/3e2723/ffffff?text=Page4+Body+Image'); /* Replace for page4 */
+}
+.page5 body {
+    background-image: url('https://via.placeholder.com/1920x1080/3e2723/ffffff?text=Page5+Body+Image'); /* Replace for page5 */
+}
+.page6 body {
+    background-image: url('https://via.placeholder.com/1920x1080/3e2723/ffffff?text=Page6+Body+Image'); /* Replace for page6 */
+}
+.page7 body {
+    background-image: url('https://via.placeholder.com/1920x1080/3e2723/ffffff?text=Page7+Body+Image'); /* Replace for page7 */
+}
+.page8 body {
+    background-image: url('https://via.placeholder.com/1920x1080/3e2723/ffffff?text=Page8+Body+Image'); /* Replace for page8 */
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+header {
+    /* Default header background image - replace or override per page */
+    background: url('https://via.placeholder.com/1920x600/4e342e/ffffff?text=Default+Header+Texture') no-repeat center center;
+    background-size: cover;
+    color: #f5f5dc; /* Cream */
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0 4px 15px rgba(78, 52, 46, 0.4); /* Brown shadow */
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(78, 52, 46, 0.7) 0%, rgba(62, 39, 35, 0.7) 100%);
+    z-index: -1;
+}
+
+/* Page-specific overrides for header background */
+.page1 header {
+    background-image: url('https://via.placeholder.com/1920x600/4e342e/ffffff?text=Page1+Header+Image'); /* Replace for page1 header */
+}
+.page2 header {
+    background-image: url('https://via.placeholder.com/1920x600/4e342e/ffffff?text=Page2+Header+Image'); /* Replace for page2 */
+}
+.page3 header {
+    background-image: url('https://via.placeholder.com/1920x600/4e342e/ffffff?text=Page3+Header+Image'); /* Replace for page3 */
+}
+.page4 header {
+    background-image: url('https://via.placeholder.com/1920x600/4e342e/ffffff?text=Page4+Header+Image'); /* Replace for page4 */
+}
+.page5 header {
+    background-image: url('https://via.placeholder.com/1920x600/4e342e/ffffff?text=Page5+Header+Image'); /* Replace for page5 */
+}
+.page6 header {
+    background-image: url('https://via.placeholder.com/1920x600/4e342e/ffffff?text=Page6+Header+Image'); /* Replace for page6 */
+}
+.page7 header {
+    background-image: url('https://via.placeholder.com/1920x600/4e342e/ffffff?text=Page7+Header+Image'); /* Replace for page7 */
+}
+.page8 header {
+    background-image: url('https://via.placeholder.com/1920x600/4e342e/ffffff?text=Page8+Header+Image'); /* Replace for page8 */
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(255, 215, 0, 0.4); /* Gold glow */
+    animation: fadeInUp 1s ease-out;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav {
+    background: linear-gradient(135deg, #f5f5dc 0%, #ede0c8 100%); /* Cream gradient */
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px rgba(245, 245, 220, 0.3); /* Cream shadow */
+}
+
+nav a {
+    color: #4e342e; /* Brown text */
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #daa520, transparent); /* Bronze sweep */
+    transition: left 0.5s;
+}
+
+nav a:hover::before {
+    left: 100%;
+}
+
+nav a:hover {
+    background-color: rgba(78, 52, 46, 0.1); /* Brown tint */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(245, 245, 220, 0.4);
+    border-color: #4e342e; /* Brown border */
+}
+
+/* Focus state for accessibility */
+nav a:focus {
+    outline: 2px solid #daa520;
+    outline-offset: 2px;
+}
+
+/* Mobile navigation toggle */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #4e342e;
+    font-size: 1.8em;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.nav-toggle:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #f5f5dc;
+    }
+    nav.active {
+        display: flex;
+    }
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    nav a {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.content {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    /* Default content background image - replace or override per page */
+    background: url('https://via.placeholder.com/1000x600/faf0e6/5d4e37?text=Default+Cream+Paper') no-repeat center center;
+    background-size: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(78, 52, 46, 0.1);
+    animation: fadeIn 1.2s ease-out;
+    position: relative;
+    background-color: #faf0e6; /* Fallback */
+    border: 1px solid #daa520; /* Bronze border */
+}
+
+/* Page-specific image styles - customize sizes, placements, etc. */
+/* Page 1 */
+.index .img1 { width: 50%; float: left; margin-right: 20px; } /* First image: half width, float left */
+.index .img2 { width: 100%; margin: 20px 0; } /* Second image: full width */
+.index .img3 { width: 40%; float: right; margin-left: 20px;margin-top: -20px; } /* Third image: 30% width, float right */
+
+
+/* Page 2 */
+.page2 .img1 { width: 35%; margin: 20px 0; margin-left: 295px; } /* First image: full width */
+
+/* Page 3 */
+.page3 .img1 { width: 50%; margin: 20px auto; display: block; } /* First image: 70% width, centered */
+.page3 .img2 { width: 30%; float: right; margin-right: 10px;margin-top: -240px; } /* Second image: half width, float left */
+.page3 .img3 { width: 100%; margin: 20px 0; } /* Third image: full width */
+/* Page 4 */
+.page4 .img1 { width: 60%; margin: 20px auto; display: block;margin-left: 200px; } /* First image: 60% width, centered */
+.page4 .img2 { width: 50%; margin: 20px 0;margin-left: 250px; } /* Second image: full width */
+.page4 .img3 { width: 50%; float: right; margin-left: 20px;margin-top: -250px; } /* Third image: half width, float right */
+.page4 .img4 { width: 40%; margin: 20px auto; display: block;float: right;margin-top: -580px; } /* Fourth image: 70% width, centered */
+
+/* Page 5 */
+.page5 .img1 { width: 50%; margin: 20px auto; display: block; } /* First image: 80% width, centered */
+.page5 .img2 { width: 50%; float: left; margin-right: 20px; } /* Second image: half width, float left */
+.page5 .img3 { width: 30%; margin: 20px auto; display: block; margin-top:-10px;margin-left:350px;} /* Third image: 60% width, centered */
+
+/* Page 6 */
+.page6 .img1 { width: 50%; float: right; margin-left: 20px; } /* First image: half width, float right */
+.page6 .img2 { width: 70%; margin: 20px auto; display: block; } /* Second image: 70% width, centered */
+.page6 .img3 { width: 100%; margin: 20px 0; } /* Third image: full width */
+.page6 .img4 { width: 60%; margin: 20px auto; display: block; } /* Fourth image: 60% width, centered */
+.page6 .img5 { width: 40%; float: left; margin-right: 20px; } /* Fifth image: 40% width, float left */
+.page6 .img6 { width: 80%; margin: 20px 0; } /* Sixth image: 80% width */
+.page6 .img7 { width: 30%; float: right; margin-left: 20px; } /* Seventh image: 30% width, float right */
+.page6 .img8 { width: 100%; margin: 20px 0; } /* Eighth image: full width */
+/* Page 7 */
+.page7 .img1 { width: 70%; margin: 20px auto; display: block; } /* First image: 70% width, centered */
+.page7 .img2 { width: 100%; margin: 20px 0; } /* Second image: full width */
+.page7 .img3 { width: 50%; float: left; margin-right: 20px; } /* Third image: half width, float left */
+.page7 .img4 { width: 60%; margin: 20px auto; display: block; } /* Fourth image: 60% width, centered */
+.page7 .img5 { width: 80%; margin: 20px 0; } /* Fifth image: 80% width */
+.page7 .img6 { width: 40%; float: right; margin-left: 20px; } /* Sixth image: 40% width, float right */
+.page7 .img7 { width: 30%; float: left; margin-right: 20px; } /* Seventh image: 30% width, float left */
+.page7 .img8 { width: 100%; margin: 20px 0; } /* Eighth image: full width */
+/* Page 8 */
+.page8 .img1 { width: 100%; margin: 20px 0; } /* First image: full width */
+.page8 .img2 { width: 60%; margin: 20px auto; display: block; } /* Second image: 60% width, centered */
+.page8 .img3 { width: 50%; float: right; margin-left: 20px; } /* Third image: half width, float right */
+.page8 .img4 { width: 70%; margin: 20px auto; display: block; } /* Fourth image: 70% width, centered */
+.page8 .img5 { width: 40%; float: left; margin-right: 20px; } /* Fifth image: 40% width, float left */
+.page8 .img6 { width: 80%; margin: 20px 0; } /* Sixth image: 80% width */
+.page8 .img7 { width: 30%; float: right; margin-left: 20px; } /* Seventh image: 30% width, float right */
+.page8 .img8 { width: 100%; margin: 20px 0; } /* Eighth image: full width */
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(218, 165, 32, 0.3); /* Bronze shadow */
+    filter: brightness(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content h2, .content h3, .content h4 {
+    font-family: 'Playfair Display', serif;
+    color: #4e342e; /* Brown headings */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.content h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #daa520, #c0c0c0); /* Bronze to silver */
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.content p, .content ul, .content ol {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #333; /* Balanced dark gray */
+    position: relative;
+    z-index: 1;
+}
+
+.content ul, .content ol {
+    padding-left: 25px;
+}
+
+.content li {
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(78, 52, 46, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: brightness(1);
+    border: 2px solid #daa520; /* Bronze frame */
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* Lightbox styles (enhanced) */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(78, 52, 46, 0.9) 0%, rgba(62, 39, 35, 0.9) 100%);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(218, 165, 32, 0.5); /* Bronze glow */
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #daa520;
+    font-size: 2.5em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.lightbox .close:hover {
+    color: #f5f5dc;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(135deg, #4e342e 0%, #3e2723 100%);
+    color: #f5f5dc;
+    margin-top: 30px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+    box-shadow: 0 -4px 15px rgba(78, 52, 46, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content {
+        margin: 15px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    .content h2 {
+        font-size: 1.8em;
+    }
+    .content p {
+        font-size: 1em;
+    }
+    img {
+        margin: 15px 0;
+    }
+    body {
+        background-attachment: scroll;
+    }
+    .content {
+        background-size: contain;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    nav a {
+        padding: 10px;
+        margin: 0 10px;
+    }
+    .content {
+        padding: 15px;
+    }
+}
